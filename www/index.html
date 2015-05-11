@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+  <title>Scavenger hunt - Zagreb</title>
+  <meta name="description" content="Scavenger hunt Zagreb">
+  <meta name="author" content="PPIJ 2015 - Team Clue">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/base.css">
+
+  <link rel="stylesheet" href="styles/splash-screen.css">
+  <link rel="stylesheet" href="styles/app-navigation-bar.css">
+  <link rel="stylesheet" href="styles/app-map.css">
+  <link rel="stylesheet" href="styles/app-footer.css">
+  <link rel="stylesheet" href="styles/app-message-box.css">
+  <link rel="stylesheet" href="styles/app-game-abcd.css">
+
+  <!-- LIBRARIES -->
+  <script type="text/javascript" src="libraries/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+    <div class="sh-main-frame">
+
+        <div class="sh-splash-screen" id="splashScreen">
+            <div class="app-label">
+                <div class="app-name">
+                    Scavenger Hunt
+                </div>
+                <div class="city-name">
+                    ZAGREB
+                </div>
+            </div>
+            <div class="team-name">
+                PPIJ Team Clue | 2015
+            </div>
+        </div>
+
+        <div class="sh-app-navigation-bar" id="navigationBar">
+            <div class="left-button close">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="title">
+                ZAGREB
+            </div>
+            <div class="right-button info">
+                <i class="fa fa-info"></i>
+            </div>
+        </div>
+
+        <div class="sh-app-map" id="appMap">
+            <div class="start">
+                START
+            </div>
+            <div class="circles">
+                <!-- div class="circle" -> span will be rendered here -->
+            </div>
+            <div class="finish">
+                FINISH
+            </div>
+        </div>
+
+        <div class="sh-app-game-abcd" id="appGameAbcd">
+            <div class="question">
+                <div class="text">Question...</div>
+            </div>
+            <div class="answers">
+                <div class="a one">
+                    <div class="text">Answer 1</div>
+                </div>
+                <div class="a two">
+                    <div class="text">Answer 2</div>
+                </div>
+                <div class="a three">
+                    <div class="text">Answer 3</div>
+                </div>
+                <div class="a four">
+                    <div class="text">Answer 4</div>
+                </div>
+            </div>
+        </div>
+        <div class="sh-app-message-box-cover" id="appMessageBox">
+          <div class="sh-app-message-box">
+              <div class="close">
+                  <i class="fa fa-times"></i>
+              </div>
+              <div class="message">
+                  Message...
+              </div>
+              <div class="button">
+                  Button
+              </div>
+          </div>
+        </div>
+
+        <div class="sh-app-footer" id="appFooter">
+            Scavenger Hunt
+        </div>
+
+    </div>
+
+    <!-- ENVIRONMENT -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- CONTROLLERS -->
+    <script type="text/javascript" src="controllers/Main.js"></script>
+    <script type="text/javascript" src="controllers/Common.js"></script>
+    <script type="text/javascript" src="controllers/Map.js"></script>
+    <script type="text/javascript" src="controllers/QuestionAbcd.js"></script>
+    <!-- DATA AND MODELS -->
+    <script type="text/javascript" src="data/Storage.js"></script>
+    <script type="text/javascript" src="models/Locations.js"></script>
+    <script type="text/javascript" src="models/Questions.js"></script>
+    <script type="text/javascript" src="models/Games.js"></script>
+    <script>
+        window.onload = function() {
+            views.SplashScreen = $("#splashScreen");
+            views.Map = $("#appMap");
+            views.NavigationBar = $("#navigationBar");
+            views.Footer = $("#appFooter");
+            views.MessageBox = $("#appMessageBox");
+            views.QuestionAbcd = $("#appGameAbcd");
+
+            controllers.Main.init();
+        };
+    </script>
+</body>
+</html>

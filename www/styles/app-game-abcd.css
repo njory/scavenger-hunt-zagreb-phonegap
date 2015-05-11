@@ -1,0 +1,78 @@
+.sh-app-game-abcd {
+	display: none;
+
+	position: absolute;
+	overflow: auto;
+
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 30px;
+}
+
+.sh-app-game-abcd .question {
+	height: 40%;
+	width: 100%;
+	margin-top: 10%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+    text-align: center;
+}
+
+.sh-app-game-abcd .question .text {
+	display: table-cell;
+    vertical-align: middle;
+
+    font-size: 160%;
+}
+
+.sh-app-game-abcd .answers {
+	height: 40%;
+	width: 100%;
+	margin-top: 10%;
+}
+
+.sh-app-game-abcd .answers .a.selected {
+	background-color: rgba(234, 112, 14, 0.8);
+}
+
+.sh-app-game-abcd .answers .a {
+	width: 50%;
+	height: 50%;
+	background-color: rgba(255, 255, 255, 0.8);
+	float: left;
+
+	display: table;
+    text-align: center;
+}
+
+.sh-app-game-abcd .answers .a .text {
+	display: table-cell;
+    vertical-align: middle;
+
+    font-size: 140%;
+}
+
+.sh-app-game-abcd .answers .a.one .text {
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+}
+
+.sh-app-game-abcd .answers .a.two .text {
+	border-top: 1px solid #000;
+}
+
+.sh-app-game-abcd .answers .a.three .text {
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.sh-app-game-abcd .answers .a.four .text {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}

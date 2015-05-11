@@ -1,0 +1,81 @@
+.sh-app-message-box-cover {
+	display: none;
+
+	position: absolute;
+	overflow: auto;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sh-app-message-box-cover .sh-app-message-box {
+	position: absolute;
+	overflow: auto;
+
+	top: 70px;
+	left: 10px;
+	right: 10px;
+	bottom: 30px;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #000;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .close {
+	float: right;
+	margin: 10px;
+
+	color: #000;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .close i.fa {
+	font-size: 200%;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .message {
+	clear: both;
+	font-size: 240%;
+	color: #000;
+	padding: 20px;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .button {
+	position: absolute;
+	bottom: 10%;
+	width: 160px;
+	height: 60px;
+
+	line-height: 60px;
+	text-align: center;
+	font-size: 180%;
+
+	left: 50%;
+	margin-left: -80px;
+
+	color: #fff;
+
+	border-radius: 10px;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .button.scan {
+	background-color: rgb(121, 149, 64);
+}
+
+.sh-app-message-box-cover .sh-app-message-box .button.play-again {
+	background-color: rgb(234, 112, 14);
+}
+
+.sh-app-message-box-cover .sh-app-message-box .button.confirm-abcd {
+	background-color: rgb(121, 149, 64);
+}
+
+.sh-app-message-box-cover .sh-app-message-box .button.close-info,
+.sh-app-message-box-cover .sh-app-message-box .button.no-button {
+	display: none;
+}

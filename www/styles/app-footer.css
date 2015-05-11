@@ -1,0 +1,13 @@
+.sh-app-footer {
+	display: none;
+
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+
+	font-size: 100%;
+
+	color: #fff;
+	text-align: center;
+}

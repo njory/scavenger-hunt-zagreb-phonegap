@@ -1,0 +1,45 @@
+.sh-splash-screen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	color: #fff;
+	text-align: center;
+}
+
+.sh-splash-screen .app-label {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	right: 0;
+}
+
+.sh-splash-screen .app-label .app-name {
+	position: relative;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+
+	font-size: 240%;
+}
+
+.sh-splash-screen .app-label .city-name {
+	position: relative;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+
+	font-size: 340%;
+}
+
+.sh-splash-screen .team-name {
+	position: absolute;
+
+	bottom: 10px;
+	left: 0;
+	right: 0;
+}

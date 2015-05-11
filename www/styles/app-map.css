@@ -1,0 +1,78 @@
+.sh-app-map {
+	display: none;
+
+	position: absolute;
+	overflow: auto;
+
+	top: 80px;
+	left: 10px;
+	right: 10px;
+	bottom: 30px;
+}
+
+.sh-app-map .start {
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	font-size: 140%;
+}
+
+.sh-app-map .finish {
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
+
+	font-size: 140%;
+}
+
+.sh-app-map .circles {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+}
+
+.sh-app-map .circles .circle {
+	border-radius: 50%;
+	border: 1px solid #000;
+
+	position: absolute;
+
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+
+	display: table;
+    text-align: center;
+}
+
+.sh-app-map .circles .circle span {
+	position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    font-size: 300%;
+}
+
+.sh-app-map .circles .circle.active {
+	background-color: rgb(255, 217, 102);
+}
+
+.sh-app-map .circles .circle.scanned {
+	background-color: rgb(234, 112, 14);
+}
+
+.sh-app-map .circles .circle.disabled {
+	background-color: rgb(242, 242, 242);
+}
+
+.sh-app-map .circles .circle.finished {
+	background-color: rgb(196, 214, 160);
+}

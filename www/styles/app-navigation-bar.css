@@ -1,0 +1,38 @@
+.sh-app-navigation-bar {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+
+	border-bottom: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0.6);
+	
+	color: #fff;
+	text-align: center;
+}
+
+.sh-app-navigation-bar .left-button,
+.sh-app-navigation-bar .right-button {
+	height: 100%;
+	width: 20%;
+	float: left;
+
+	font-size: 150%;
+}
+
+.sh-app-navigation-bar .left-button i.fa,
+.sh-app-navigation-bar .right-button i.fa {
+	position: relative;
+    top: 33%; 
+}
+
+.sh-app-navigation-bar .title {
+	height: 100%;
+	width: 60%;
+	line-height: 200%;
+	font-size: 200%;
+	float: left;
+}
