@@ -1,0 +1,47 @@
+.sh-app-game-input {
+	display:none;
+	position: absolute;
+	overflow: auto;
+
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 30px;
+}
+
+.sh-app-game-input .question {
+	height: 40%;
+	width: 100%;
+	margin-top: 10%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+    text-align: center;
+}
+
+.sh-app-game-input .question .text {
+	display: table-cell;
+    vertical-align: middle;
+
+    font-size: 160%;
+}
+
+.sh-app-game-input .input {
+	height: 40%;
+	width: 100%;
+	margin-top: 10%;
+}
+
+.sh-app-game-input .input .inputOne .textInput{
+	width: 60%;
+	font-size:200%;
+	float: left;
+
+	display: table;
+    text-align: center;
+	margin-top: 20%;
+	margin-left: 19%;
+}
