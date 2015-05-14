@@ -36,6 +36,7 @@ controllers.Main = {
 		controllers.Common.init();
 		controllers.Map.init();
 		controllers.QuestionAbcd.init();
+		controllers.QuestionInput.init();
 		
 		me.showMapView();
 	},
