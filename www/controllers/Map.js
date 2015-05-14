@@ -229,7 +229,8 @@ controllers.Map = {
 			"left-button back-from-abcd",
 			"right-button confirm-abcd",
 			"fa fa-chevron-left",
-			"fa fa-check"
+			"fa fa-check",
+                        "show hint"
 		);
 
 		controllers.QuestionAbcd.clearAnswers();

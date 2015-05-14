@@ -32,13 +32,14 @@ controllers.Common = {
 
 		messageBox.show(200);
 	},
-	switchNavigationBar: function(titleVal, leftCls, rightCls, leftIconCls, rightIconCls) {
+	switchNavigationBar: function(titleVal, leftCls, rightCls, leftIconCls, rightIconCls, hVisibility) {
 		var navigationBar = views.NavigationBar,
 			title = navigationBar.find(".title").eq(0),
 			leftButton = navigationBar.find(".left-button").eq(0),
 			rightButton = navigationBar.find(".right-button").eq(0),
 			leftIcon = leftButton.find("i").eq(0),
-			rightIcon = rightButton.find("i").eq(0);
+			rightIcon = rightButton.find("i").eq(0),
+                        hintButton = document.getElementById('hint');
 
 		title.html(titleVal);
 		leftButton.removeClass();
@@ -51,5 +52,13 @@ controllers.Common = {
 
 		rightIcon.removeClass();
 		rightIcon.addClass(rightIconCls);
+                
+                if($.trim(hVisibility) == "show hint"){
+                    title.width('40%');
+                    hintButton.style.display = 'block';
+                } else {
+                    hintButton.style.display = 'none';
+                    title.width('60%');
+                }
 	}
 };

@@ -12,6 +12,7 @@ controllers.QuestionAbcd = {
 		view.on('touchstart', '.a', me.onAnswerSelect);
 		navigationBar.on('touchstart', '.left-button.back-from-abcd', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-abcd', me.onConfirm);
+                navigationBar.on('touchstart', '.hint-button', me.onAskHint);
 		messageBox.on('touchstart', '.button.confirm-abcd', me.onMessageBoxConfirm);
 	},
 	onBack: function() {
@@ -20,7 +21,8 @@ controllers.QuestionAbcd = {
 			"left-button close",
 			"right-button info",
 			"fa fa-times",
-			"fa fa-info"
+			"fa fa-info",
+                        "hide hint"
 		);
 
 		controllers.Map.refreshCircles();
@@ -80,5 +82,9 @@ controllers.QuestionAbcd = {
 				a = answerDivs.eq(i);
 				a.removeClass("selected");
 			}
+	},
+	onAskHint: function() {
+                var activeGame = controllers.Map.activeGame;
+		controllers.Common.showMessageBox("Hint: Tocan odgovor je " + activeGame.game.question.correctAnswer + ".", "", "button no-button", true);
 	}
 };
