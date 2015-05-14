@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles/app-footer.css">
   <link rel="stylesheet" href="styles/app-message-box.css">
   <link rel="stylesheet" href="styles/app-game-abcd.css">
+  <link rel="stylesheet" href="styles/app-game-input.css">
 
   <!-- LIBRARIES -->
   <script type="text/javascript" src="libraries/jquery-2.1.4.min.js"></script>
@@ -88,6 +89,16 @@
                 </div>
             </div>
         </div>
+        <div class="sh-app-game-input" id="appGameInput">
+			    <div class="question">
+				    <div class="text">Question...</div>
+			    </div>
+			    <div class="input">
+				    <div class="inputOne">
+					    <input class="textInput" id="inputField" type="text" />
+				    </div>
+			    </div>
+		    </div>
         <div class="sh-app-message-box-cover" id="appMessageBox">
           <div class="sh-app-message-box">
               <div class="close">
@@ -115,6 +126,7 @@
     <script type="text/javascript" src="controllers/Common.js"></script>
     <script type="text/javascript" src="controllers/Map.js"></script>
     <script type="text/javascript" src="controllers/QuestionAbcd.js"></script>
+    <script type="text/javascript" src="controllers/QuestionInput.js"></script>
     <!-- DATA AND MODELS -->
     <script type="text/javascript" src="data/Storage.js"></script>
     <script type="text/javascript" src="models/Locations.js"></script>
@@ -128,6 +140,7 @@
             views.Footer = $("#appFooter");
             views.MessageBox = $("#appMessageBox");
             views.QuestionAbcd = $("#appGameAbcd");
+            views.QuestionInput = $("#appGameInput");
 
             controllers.Main.init();
         };
