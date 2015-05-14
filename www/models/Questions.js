@@ -6,22 +6,22 @@ models.Questions = {
 			{
 				questionType: "A",
 				question: {
-					text: "Question 1",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
+					text: "Marko i Danijel su krenuli na put. Marko je vozio prvih 90 km a Danijel ostatak puta. Na povratku je Marko prvi vozio, a Danijel preuzeo posljednjih 100 km. Tko je vozio više?",
+					a1: "Danijel",
+					a2: "Marko",
+					a3: "Jednako",
+					a4: "Nema dovoljno informacija",
 					correctAnswer: "a1"
 				}
 			},
 			{
 				questionType: "A",
 				question: {
-					text: "Question 2",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
+					text: "Imamo tri označene kutije, ali svaka kutija je krivo označena. U kutijama se nalaze: jabuke, banane, te jabuke i banane. Iz kutije sa kojom oznakom možemo izvući jedno voće kako bi ih znali pravilno označiti?",
+					a1: "Jabuke",
+					a2: "Banane",
+					a3: "Jabuke i banane",
+					a4: "Nije moguće odrediti",
 					correctAnswer: "a2"
 				}
 			},
