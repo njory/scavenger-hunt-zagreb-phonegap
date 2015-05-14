@@ -199,6 +199,9 @@ controllers.Map = {
 			case "A":
 				controller.showQuestionAbcd(gameNumber + 1, activeGame);
 				break;
+			case "B":
+				controller.showQuestionInput(gameNumber + 1, activeGame);
+				break;
 		}
 	},
 	showQuestionAbcd: function(gameNumber, activeGame) {
@@ -237,5 +240,25 @@ controllers.Map = {
 		views.Map.hide(200);
 		views.MessageBox.hide(200);
 		views.QuestionAbcd.show(200);
+	},
+	
+	showQuestionInput: function(gameNumber, activeGame){
+		var questionView = views.QuestionInput,
+		    question = questionView.find(".question .text").eq(0),
+			correct = activeGame.game.question.correctAnswer;
+			
+		question.html(activeGame.game.question.text);
+		
+		controllers.Common.switchNavigationBar(
+			"GAME " + gameNumber,
+			"left-button back-from-input",
+			"right-button confirm-input",
+			"fa fa-chevron-left",
+			"fa fa-check"
+		);
+		
+		views.Map.hide(200);
+		views.MessageBox.hide(200);
+		views.QuestionInput.show(200);
 	}
 };
