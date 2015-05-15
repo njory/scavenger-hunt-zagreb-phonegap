@@ -10,12 +10,27 @@ controllers.Map = {
 	bindEvents: function() {
 		var me = this,
 			view = views.Map,
+			navigationBar = views.NavigationBar,
 			messageBox = views.MessageBox;
 
 		view.on('touchstart', '.circle.active', me.onActiveCircleTap);
 		view.on('touchstart', '.circle.scanned', me.onScannedCircleTap);
 		messageBox.on('touchstart', '.button.scan', me.onScanButtonTap);
 		messageBox.on('touchstart', '.button.play-again', me.onPlayAgain);
+                navigationBar.on('touchstart', '.left-button.back-from-map', me.onBack);
+	},
+	onBack: function() {
+		controllers.Common.switchNavigationBar(
+			"ZAGREB",
+			"left-button close",
+			"right-button info",
+			"fa fa-times",
+			"fa fa-info"
+		);
+
+		controllers.Map.refreshCircles();
+		views.Map.hide(200);
+		views.MainMenu.show(200);
 	},
 	getCirclesContainer: function() {
 		return views.Map.find(".circles").eq(0);

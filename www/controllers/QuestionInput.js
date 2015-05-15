@@ -17,10 +17,10 @@ controllers.QuestionInput = {
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
-			"ZAGREB",
-			"left-button close",
+			"KARTA",
+			"left-button back-from-map",
 			"right-button info",
-			"fa fa-times",
+			"fa fa-chevron-left",
 			"fa fa-info"
 		);
 

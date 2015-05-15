@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="styles/splash-screen.css">
   <link rel="stylesheet" href="styles/app-navigation-bar.css">
+  <link rel="stylesheet" href="styles/app-main-menu.css">
   <link rel="stylesheet" href="styles/app-map.css">
   <link rel="stylesheet" href="styles/app-footer.css">
   <link rel="stylesheet" href="styles/app-message-box.css">
@@ -55,6 +56,18 @@
             </div>
         </div>
 
+        <div class="sh-app-main-menu" id="appMainMenu">
+            <div class="button play" id="play">
+                    IGRA
+            </div>
+            <div class="button score" id="score">
+                    BODOVI
+            </div>
+            <div class="button help" id="help">
+                    POMOĆ
+            </div>
+        </div>
+        
         <div class="sh-app-map" id="appMap">
             <div class="start">
                 START
@@ -124,6 +137,7 @@
     <!-- CONTROLLERS -->
     <script type="text/javascript" src="controllers/Main.js"></script>
     <script type="text/javascript" src="controllers/Common.js"></script>
+    <script type="text/javascript" src="controllers/MainMenu.js"></script>
     <script type="text/javascript" src="controllers/Map.js"></script>
     <script type="text/javascript" src="controllers/QuestionAbcd.js"></script>
     <script type="text/javascript" src="controllers/QuestionInput.js"></script>
@@ -135,6 +149,7 @@
     <script>
         window.onload = function() {
             views.SplashScreen = $("#splashScreen");
+            views.MainMenu = $("#appMainMenu");
             views.Map = $("#appMap");
             views.NavigationBar = $("#navigationBar");
             views.Footer = $("#appFooter");

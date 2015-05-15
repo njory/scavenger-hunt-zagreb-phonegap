@@ -34,11 +34,12 @@ controllers.Main = {
 		me.bindEvents();
 
 		controllers.Common.init();
+                controllers.MainMenu.init();
 		controllers.Map.init();
 		controllers.QuestionAbcd.init();
 		controllers.QuestionInput.init();
 		
-		me.showMapView();
+		me.showMainMenuView();
 	},
 	bindEvents: function() {
 		var me = this;
@@ -50,14 +51,14 @@ controllers.Main = {
 		var leftButton = views.NavigationBar.find(".left-button").eq(0);
 		leftButton.trigger('touchstart');
 	},
-	showMapView: function() {
+	showMainMenuView: function() {
 		var splashScreen = views.SplashScreen,
-			mapView = views.Map,
+			mainView = views.MainMenu,
 			navigationBar = views.NavigationBar,
 			footer = views.Footer;
 
 		splashScreen.hide(2000, function() {
-			mapView.show(200);
+			mainView.show(200);
 			navigationBar.show(200);
 			footer.show(200);
 		});
