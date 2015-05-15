@@ -1,0 +1,46 @@
+.sh-app-help {
+	display: none;
+
+	position: absolute;
+	overflow: auto;
+
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 30px;
+}
+
+.sh-app-help .tile-qr {
+        height: 100%;
+	width: 100%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+        text-align: center;
+}
+
+.sh-app-help .tile-qr .image {
+    width: 80%;
+    padding-top:40%;
+    
+    margin-top: 15%;
+    margin-left: 10%;
+    
+    background-image: url(../images/QR-Help.png);
+    background-size: contain;
+    background-repeat: none;
+    background-position: center center;
+}
+
+.sh-app-help .tile-qr .text {
+    height: 50%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    vertical-align: middle;
+
+    font-size: 200%;
+}

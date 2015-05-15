@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles/app-main-menu.css">
   <link rel="stylesheet" href="styles/app-map.css">
   <link rel="stylesheet" href="styles/app-footer.css">
+  <link rel="stylesheet" href="styles/app-help.css">
   <link rel="stylesheet" href="styles/app-message-box.css">
   <link rel="stylesheet" href="styles/app-game-abcd.css">
   <link rel="stylesheet" href="styles/app-game-input.css">
@@ -65,6 +66,13 @@
             </div>
             <div class="button help" id="help">
                     POMOĆ
+            </div>
+        </div>
+        
+        <div class="sh-app-help" id="appHelp">
+            <div class="tile-qr">
+                <div class="image"></div>
+                <div class="text">Placeholder Text</div>
             </div>
         </div>
         
@@ -139,6 +147,7 @@
     <script type="text/javascript" src="controllers/Common.js"></script>
     <script type="text/javascript" src="controllers/MainMenu.js"></script>
     <script type="text/javascript" src="controllers/Map.js"></script>
+    <script type="text/javascript" src="controllers/Help.js"></script>
     <script type="text/javascript" src="controllers/QuestionAbcd.js"></script>
     <script type="text/javascript" src="controllers/QuestionInput.js"></script>
     <!-- DATA AND MODELS -->
@@ -153,6 +162,7 @@
             views.Map = $("#appMap");
             views.NavigationBar = $("#navigationBar");
             views.Footer = $("#appFooter");
+            views.Help = $("#appHelp");
             views.MessageBox = $("#appMessageBox");
             views.QuestionAbcd = $("#appGameAbcd");
             views.QuestionInput = $("#appGameInput");

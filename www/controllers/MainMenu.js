@@ -5,9 +5,11 @@ controllers.MainMenu = {
 	},
 	bindEvents: function() {
 		var me = this,
-			view = views.MainMenu;
+		view = views.MainMenu;
 
 		view.on('touchstart', '.button.play', me.onPlay);
+                view.on('touchstart', '.button.score', me.onScore);
+                view.on('touchstart', '.button.help', me.onHelp);
 	},
 	onPlay: function() {
 		controllers.Map.refreshCircles();
@@ -21,7 +23,22 @@ controllers.MainMenu = {
 			"fa fa-chevron-left",
 			"fa fa-info"
 		);
-	}
+	},
+        onScore: function() {
+            ;
+        },
+        onHelp: function() {
+            views.Help.show(200);
+            views.MainMenu.hide(200);
+            
+            controllers.Common.switchNavigationBar(
+			"POMOĆ",
+			"left-button back-from-help",
+			"right-button info",
+			"fa fa-chevron-left",
+			"fa fa-info"
+            );
+        }
 };
 
 

@@ -28,7 +28,6 @@ controllers.Map = {
 			"fa fa-info"
 		);
 
-		controllers.Map.refreshCircles();
 		views.Map.hide(200);
 		views.MainMenu.show(200);
 	},
