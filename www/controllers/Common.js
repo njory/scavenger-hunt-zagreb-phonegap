@@ -38,8 +38,7 @@ controllers.Common = {
 			leftButton = navigationBar.find(".left-button").eq(0),
 			rightButton = navigationBar.find(".right-button").eq(0),
 			leftIcon = leftButton.find("i").eq(0),
-			rightIcon = rightButton.find("i").eq(0),
-                        hintButton = document.getElementById('hint');
+			rightIcon = rightButton.find("i").eq(0);
 
 		title.html(titleVal);
 		leftButton.removeClass();
@@ -52,13 +51,5 @@ controllers.Common = {
 
 		rightIcon.removeClass();
 		rightIcon.addClass(rightIconCls);
-                
-                if($.trim(hVisibility) == "show hint"){
-                    title.width('40%');
-                    hintButton.style.display = 'block';
-                } else {
-                    hintButton.style.display = 'none';
-                    title.width('60%');
-                }
 	}
 };

@@ -10,6 +10,7 @@ controllers.QuestionInput = {
 			messageBox = views.MessageBox;
 
 		//view.on('touchstart', '.inputOne', me.onAnswerSelect); ovo valjda netreba
+                view.on('touchstart', '.hint-button', me.onAskHint);
 		navigationBar.on('touchstart', '.left-button.back-from-input', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-input', me.onConfirm);
 		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
@@ -72,5 +73,9 @@ controllers.QuestionInput = {
 
 		messageBox.hide();
 		controller.onBack();
+	},
+	onAskHint: function() {
+                var activeGame = controllers.Map.activeGame;
+		controllers.Common.showMessageBox("Hint: Tocan odgovor je " + activeGame.game.question.correctAnswer + ".", "", "button no-button", true);
 	}
 };

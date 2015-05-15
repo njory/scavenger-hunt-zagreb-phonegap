@@ -36,28 +36,3 @@
 	font-size: 200%;
 	float: left;
 }
-
-.sh-app-navigation-bar .hint-button {
-    
-        position: relative;
-        top: 10%;
-        left: 2%;
-        right: 2%;
-        
-        visibility: visible;
-        display: none;
-        
-	height: 80%;
-	width: 16%;
-        
-	line-height: 120%;
-	font-size: 300%;
-        font-weight: bold;
-        
-        
-	float: left;
-        border-radius: 10px;
-        color: #fff;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        background-color: rgb(153, 230, 255);
-}
