@@ -28,7 +28,7 @@ models.Questions = {
 			{
 				questionType: "A",
 				question: {
-					text: "U šumi zaborava lav laže svakog ponedeljka, utorka i srijede, a jednorog laže četvrtkom, petkom i subotom. Lav: "Jučer sam lagao." Jednorog: "I ja sam." Kada su ovo izjavili?",
+					text: "U šumi zaborava lav laže svakog ponedeljka, utorka i srijede, a jednorog laže četvrtkom, petkom i subotom. Lav: Jučer sam lagao. Jednorog: I ja sam. Kada su ovo izjavili?",
 					a1: "U srijedu",
 					a2: "U nedelju",
 					a3: "U četvrtak",
