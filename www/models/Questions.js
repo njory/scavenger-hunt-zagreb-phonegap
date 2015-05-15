@@ -22,28 +22,28 @@ models.Questions = {
 					a2: "Banane",
 					a3: "Jabuke i banane",
 					a4: "Nije moguće odrediti",
-					correctAnswer: "a2"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 3",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
 					correctAnswer: "a3"
 				}
 			},
 			{
 				questionType: "A",
 				question: {
-					text: "Question 4",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
+					text: "U šumi zaborava lav laže svakog ponedeljka, utorka i srijede, a jednorog laže četvrtkom, petkom i subotom. Lav: "Jučer sam lagao." Jednorog: "I ja sam." Kada su ovo izjavili?",
+					a1: "U srijedu",
+					a2: "U nedelju",
+					a3: "U četvrtak",
+					a4: "U subotu",
+					correctAnswer: "a3"
+				}
+			},
+			{
+				questionType: "A",
+				question: {
+					text: "Pokvareni sat gubi 24 minute svakog sata. Sada pokazuje 03:00 h, a znamo da je bio točan u ponoć. Ako je sat prestao raditi prije jedan sat, koliko je sada sati?",
+					a1: "05:35 h",
+					a2: "05:25 h",
+					a3: "05:00 h",
+					a4: "06:00 h",
 					correctAnswer: "a4"
 				}
 			},
@@ -105,15 +105,15 @@ models.Questions = {
 			{
 				questionType: "B",
 				question: {
-					text: "Quest B1",
-					correctAnswer: "1"
+					text: "Maja i Emil imaju nekoliko jabuka. Ako Emil da Maji jabuku oboje će imati jednak broj jabuka. Ako Maja da Emilu jabuku, on će imati duplo više jabuka od nje. Koliko jabuka ima Emil?",
+					correctAnswer: "7"
 				}
 			},
 			{
 				questionType: "B",
 				question: {
-					text: "Quest B2",
-					correctAnswer: "2"
+					text: "Ana je u laboratoriju napravila smjesu koja je teska 20 kg i sadrži 90% vode. Idući dan je smjesa imala 50% vode. Koliko je kg smjesa sada teška ako dio smjese koji ne sadrži vodu nije promijenjen?",
+					correctAnswer: "12"
 				}
 			},
 			{
