@@ -10,6 +10,30 @@
 	bottom: 30px;
 }
 
+.sh-app-help .button-left{
+        margin-top: 20%;
+        height: 20%;
+        width: 20%;
+        line-height: 400%;
+	float: left;
+	font-size: 150%;
+}
+
+.sh-app-help .button-right{
+        margin-top: 20%;
+        height: 20%;
+        width: 20%;
+        line-height: 400%;
+	float: left;
+	font-size: 150%;
+}
+
+.sh-app-navigation-bar .button-left i.fa,
+.sh-app-navigation-bar .button-right i.fa {
+	position: absolute;
+        margin-top: 10%; 
+}
+
 .sh-app-help .tile-qr {
         height: 100%;
 	width: 100%;
@@ -28,6 +52,7 @@
     
     margin-top: 10%;
     margin-left: 20%;
+    float: left;
     
     background-image: url(../images/QR-Help.png);
     background-size: contain;
@@ -41,6 +66,78 @@
     margin-left: 5%;
     margin-top: 10%;
     vertical-align: middle;
+    float: left;
+    font-size: 150%;
+}
 
+.sh-app-help .tile-navbar {
+        height: 100%;
+	width: 100%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+        text-align: center;
+}
+
+.sh-app-help .tile-navbar .image {
+    width: 60%;
+    padding-top:30%;
+    
+    margin-top: 10%;
+    margin-left: 0;
+    float: left;
+    
+    background-image: url(../images/navbar-Help.png);
+    background-size: contain;
+    background-repeat: none;
+    background-position: center center;
+}
+
+.sh-app-help .tile-navbar .text {
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+    vertical-align: middle;
+    float: left;
+    font-size: 150%;
+}
+
+.sh-app-help .tile-abcd {
+        height: 100%;
+	width: 100%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+        text-align: center;
+}
+
+.sh-app-help .tile-abcd .image {
+    width: 60%;
+    padding-top:60%;
+    
+    margin-top: 10%;
+    margin-right: 20%;
+    float: left;
+    
+    background-image: url(../images/abcd-Help.png);
+    background-size: contain;
+    background-repeat: none;
+    background-position: center center;
+}
+
+.sh-app-help .tile-abcd .text {
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+    vertical-align: middle;
+    float: left;
     font-size: 150%;
 }
