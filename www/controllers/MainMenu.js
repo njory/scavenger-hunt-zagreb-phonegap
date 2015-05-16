@@ -25,6 +25,8 @@ controllers.MainMenu = {
 		);
 	},
         onScore: function() {
+            controllers.Score.setScoreBoard();
+            
             views.Score.show(200);
             views.MainMenu.hide(200);
             

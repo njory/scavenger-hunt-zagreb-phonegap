@@ -70,7 +70,7 @@ controllers.Main = {
 	},
 	onInfo: function() {
 		controllers.Common.showMessageBox("Aplikaciju izradio tim Clue,\
-			kolegij PPIJ - FER 2015, u sastavu: Nejra Muslić...", "Zatvori", "button close-info", true);
+			kolegij PPIJ - FER 2015, u sastavu: Nejra Muslić, Andrej Šeškar, Mateo Šimonović i Tomislav Huljina", "Zatvori", "button close-info", true);
 	},
 	generateGames: function() {
 		var me = this,
