@@ -36,6 +36,7 @@ controllers.Main = {
 		controllers.Common.init();
                 controllers.MainMenu.init();
 		controllers.Map.init();
+                controllers.Score.init();
                 controllers.Help.init();
 		controllers.QuestionAbcd.init();
 		controllers.QuestionInput.init();

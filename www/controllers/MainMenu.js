@@ -25,7 +25,16 @@ controllers.MainMenu = {
 		);
 	},
         onScore: function() {
-            ;
+            views.Score.show(200);
+            views.MainMenu.hide(200);
+            
+            controllers.Common.switchNavigationBar(
+			"BODOVI",
+			"left-button back-from-score",
+			"right-button info",
+			"fa fa-chevron-left",
+			"fa fa-info"
+            );
         },
         onHelp: function() {
             views.Help.show(200);

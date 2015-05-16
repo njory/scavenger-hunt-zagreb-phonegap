@@ -1,0 +1,53 @@
+.sh-app-score {
+	display: none;
+
+	position: absolute;
+	overflow: auto;
+
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 30px;
+}
+
+.sh-app-score .entry {
+	height: 15%;
+	width: 100%;
+	margin-top: 10%;
+
+	background-color: rgba(255, 255, 255, 0.8);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	display: table;
+        text-align: center;
+}
+
+.sh-app-score .entry .position {
+        width: 20%;
+	display: table-cell;
+        vertical-align: middle;
+        font-size: 200%;
+}
+
+.sh-app-score .entry .name {
+        width: 40%;
+	display: table-cell;
+        vertical-align: middle;
+        font-size: 200%;
+}
+
+.sh-app-score .entry .score {
+        width: 40%;
+	display: table-cell;
+        vertical-align: middle;
+        font-size: 200%;
+}
+
+.sh-app-score .entry.first,
+.sh-app-score .entry.second,
+.sh-app-score .entry.third,
+.sh-app-score .entry.fourth,
+.sh-app-score .entry.fifth{
+	margin-top: 5%;
+}

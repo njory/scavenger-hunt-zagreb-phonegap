@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles/app-main-menu.css">
   <link rel="stylesheet" href="styles/app-map.css">
   <link rel="stylesheet" href="styles/app-footer.css">
+  <link rel="stylesheet" href="styles/app-score.css">
   <link rel="stylesheet" href="styles/app-help.css">
   <link rel="stylesheet" href="styles/app-message-box.css">
   <link rel="stylesheet" href="styles/app-game-abcd.css">
@@ -67,6 +68,14 @@
             <div class="button help" id="help">
                     POMOĆ
             </div>
+        </div>
+        
+        <div class="sh-app-score" id="appScore">
+            <div class="entry first"><div class="position">1.</div><div class="name">prvi</div><div class="score">223</div></div>
+            <div class="entry second"><div class="position">2.</div><div class="name">drugi</div><div class="score">123</div></div>
+            <div class="entry third"><div class="position">3.</div><div class="name">treći</div><div class="score">123</div></div>
+            <div class="entry fourth"><div class="position">4.</div><div class="name">četvrti</div><div class="score">123</div></div>
+            <div class="entry fifth"><div class="position">5.</div><div class="name">peti</div><div class="score">123</div></div>
         </div>
         
         <div class="sh-app-help" id="appHelp">
@@ -159,6 +168,7 @@
     <script type="text/javascript" src="controllers/Common.js"></script>
     <script type="text/javascript" src="controllers/MainMenu.js"></script>
     <script type="text/javascript" src="controllers/Map.js"></script>
+    <script type="text/javascript" src="controllers/Score.js"></script>
     <script type="text/javascript" src="controllers/Help.js"></script>
     <script type="text/javascript" src="controllers/QuestionAbcd.js"></script>
     <script type="text/javascript" src="controllers/QuestionInput.js"></script>
@@ -174,6 +184,7 @@
             views.Map = $("#appMap");
             views.NavigationBar = $("#navigationBar");
             views.Footer = $("#appFooter");
+            views.Score = $("#appScore");
             views.Help = $("#appHelp");
             views.MessageBox = $("#appMessageBox");
             views.QuestionAbcd = $("#appGameAbcd");
