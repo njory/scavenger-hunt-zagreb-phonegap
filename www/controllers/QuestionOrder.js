@@ -40,17 +40,23 @@ controllers.QuestionOrder = {
             
             // not everything is entered
             if (controller.lastAddedNumber !== 4) {
-//                controllers.QuestionOrder.clearAnswers();
-//                controllers.Common.showMessageBox("Niste označili sve brojeve", "", "button no-button", true);
-                views.Map.showQuestionOrder()
+                controllers.Common.showMessageBox("Niste označili sve brojeve", "", "button no-button", true);
                 return;
             }
             
             // answer is correct
             if (controller.createdSequence == controllers.Map.activeGame.game.question.correctAnswer) {
+                    var points = 100 - 15 * activeGame.numberOfFails;
+                    if (points < 25) points = 25;
                     controllers.Common.showMessageBox("Odgovor je točan.\
                             Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
-                            ". pokušaja.", "Potvrdi", "button confirm-input", false);
+                            ". pokušaja. Osvojili ste " + (points) + " bodova.", 
+                            "Potvrdi", "button confirm-abcd", false);
+
+                    var cscore = models.Score.getCurrentScore();
+                    cscore = cscore + points;
+                    models.Score.setCurrentScore(cscore);
+                    models.Score.syncData();
 
                     activeGame.status = "finished";
                     models.Games.activateNextGame(gameIndex + 1);
@@ -92,7 +98,6 @@ controllers.QuestionOrder = {
                 selected.addClass("selected");
         },
         clearAnswers: function() {
-            alert("Alo!!!");
                 var questionView = views.QuestionOrder,
                         a1 = questionView.find("#a1").eq(0),
                         a2 = questionView.find("#a2").eq(0),
@@ -100,7 +105,6 @@ controllers.QuestionOrder = {
                         a4 = questionView.find("#a4").eq(0),
                         activeGame = controllers.Map.activeGame;
                 
-                alert("here!");
                 a1.html(activeGame.game.question.a1);
                 a1.removeClass("selected");
                 a2.html(activeGame.game.question.a2);
