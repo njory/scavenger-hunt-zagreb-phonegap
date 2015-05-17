@@ -35,21 +35,70 @@ controllers.Score = {
 			e4s = scoreView.find(".entry.fourth .score").eq(0),
 			e5s = scoreView.find(".entry.fifth .score").eq(0);
 
-			e1n.html("prvi");
-			e1s.html(12345);
+                        if(models.Score.getScore()){
+                            var scores = models.Score.getScore();
+                            e1n.html(scores[0].name);
+                            e1s.html(scores[0].score);
+                            
+                            if(scores.length > 1){
+                                e2n.html(scores[1].name);
+                                e2s.html(scores[1].score);
+                            }
 
-			e2n.html("drugi");
-			e2s.html(1234);
+                            if(scores.length > 2){
+                                e3n.html(scores[2].name);
+                                e3s.html(scores[2].score);
+                            }
 
-			e3n.html("treci");
-			e3s.html(123);
-
-			e4n.html("cetvrti");
-			e4s.html(12);
+                            if(scores.length > 3){
+                                e4n.html(scores[3].name);
+                                e4s.html(scores[3].score);
+                            }
                         
-			e5n.html("peti");
-			e5s.html(1);
+                            if(scores.length > 4){
+                                e5n.html(scores[4].name);
+                                e5s.html(scores[4].score);
+                            }
+                        }
 
+	},
+	updateScoreBoard: function(cname) {
+                
+		var cscore = models.Score.getCurrentScore();
+                if(models.Score.getScore()){
+                    var scores = models.Score.getScore();
+                    for(var i = 0; i < scores.length; i++) {
+                        if(cscore > scores[i].score) {
+                            break;
+                        }
+                    }
+                    var newScores = Array(scores.length);
+                    for(var j = 0; j < i; j++){
+                        newScores[j] = {
+                            name: scores[j].name,
+                            score: scores[j].score
+                        };
+                    }
+                    newScores[j] = {
+                        name: cname,
+                        score: cscore
+                    };
+                    for(var j; j < scores.length; j++){
+                        newScores[j+1] = {
+                            name: scores[j].name,
+                            score: scores[j].score
+                        };
+                    }
+                    models.Score.setScore(newScores);
+                } else if (cscore) {
+                    var newScores = Array(1);
+                    newScores[0] = {
+                        name: cname,
+                        score: cscore
+                    };
+                    models.Score.setScore(newScores);
+                }
+                models.Score.syncData();
 	}
 };
 

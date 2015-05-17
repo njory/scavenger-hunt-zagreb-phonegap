@@ -41,10 +41,18 @@ controllers.QuestionAbcd = {
 		else {
 
 			if(selectedAnswer.attr("data-correct") == "Y") {
+                                var points = 100 - 25 * activeGame.numberOfFails;
+                                if (points < 25) points = 25;
 				controllers.Common.showMessageBox("Odgovor je točan.\
 					Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
-					". pokušaja.", "Potvrdi", "button confirm-abcd", false);
-
+					". pokušaja. Osvojili ste " + (points) + " bodova.", 
+                                        "Potvrdi", "button confirm-abcd", false);
+                                
+                                var cscore = models.Score.getCurrentScore();
+                                cscore = cscore + points;
+                                models.Score.setCurrentScore(cscore);
+                                models.Score.syncData();
+                                
 				activeGame.status = "finished";
 				models.Games.activateNextGame(gameIndex + 1);
 			} else {
