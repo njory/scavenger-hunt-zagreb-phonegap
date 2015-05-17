@@ -164,11 +164,22 @@ models.Questions = {
 					text: "Quest B9",
 					correctAnswer: "9"
 				}
+			},
+                        {
+				questionType: "C",
+				question: {
+					text: "During the latest round of the ScavengerHunt triathlon, Keith was fourth. Adrian is not the oldest, but is older than Duncan, who was not second. The child who was next in age to the youngest, finished second. The child who finished in third place is older than the child who finished first. Billy is younger than the child who finished in third place. Can you determine who finished where and place the children in order of age?",
+					a1: "Keith",
+                                        a2: "Adrian",
+                                        a3: "Duncan",
+                                        a4: "Billy",
+                                        correctAnswer: "Duncan,Billy,Adrian,Keith"
+				}
 			}
-		]
+		];
 	},
 	getAllQuestions: function() {
 		var me = this;
 		return me.items;
 	}
-}
+};

@@ -208,7 +208,7 @@ controllers.Map = {
 			activeGame = controller.activeGame,
 			gameNumber = controller.activeGameIndex,
 			gameType = activeGame.game.questionType;
-
+                
 		switch(gameType) {
 			case "A":
 				controller.showQuestionAbcd(gameNumber + 1, activeGame);
@@ -216,6 +216,8 @@ controllers.Map = {
 			case "B":
 				controller.showQuestionInput(gameNumber + 1, activeGame);
 				break;
+                        case "C":
+                                controller.showQuestionOrder(gameNumber + 1, activeGame);
 		}
 	},
 	showQuestionAbcd: function(gameNumber, activeGame) {
@@ -254,14 +256,12 @@ controllers.Map = {
 		views.MessageBox.hide(200);
 		views.QuestionAbcd.show(200);
 	},
-	
 	showQuestionInput: function(gameNumber, activeGame){
 		var questionView = views.QuestionInput,
-		    question = questionView.find(".question .text").eq(0),
-			correct = activeGame.game.question.correctAnswer;
+		    question = questionView.find(".question .text").eq(0);
 			
 		question.html(activeGame.game.question.text);
-		
+                
 		controllers.Common.switchNavigationBar(
 			"GAME " + gameNumber,
 			"left-button back-from-input",
@@ -273,5 +273,36 @@ controllers.Map = {
 		views.Map.hide(200);
 		views.MessageBox.hide(200);
 		views.QuestionInput.show(200);
-	}
+	},
+        showQuestionOrder: function(gameNumber, activeGame) {
+            var questionView = views.QuestionOrder,
+                    a1 = questionView.find("#a1").eq(0),
+                    a2 = questionView.find("#a2").eq(0),
+                    a3 = questionView.find("#a3").eq(0),
+                    a4 = questionView.find("#a4").eq(0),
+                    question = questionView.find(".question .text").eq(0);
+            
+                question.html(activeGame.game.question.text);
+                
+                a1.html(activeGame.game.question.a1);
+                a1.removeClass("selected");
+                a2.html(activeGame.game.question.a2);
+                a2.removeClass("selected");
+                a3.html(activeGame.game.question.a3);
+                a3.removeClass("selected");
+                a4.html(activeGame.game.question.a4);
+                a4.removeClass("selected");
+                
+                controllers.Common.switchNavigationBar(
+			"GAME " + gameNumber,
+			"left-button back-from-order",
+			"right-button confirm-order",
+			"fa fa-chevron-left",
+			"fa fa-check"
+                );
+        
+                views.Map.hide(200);
+                views.MessageBox.hide(200);
+                views.QuestionOrder.show(200);
+        }
 };

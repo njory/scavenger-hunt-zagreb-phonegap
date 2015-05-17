@@ -40,6 +40,7 @@ controllers.Main = {
                 controllers.Help.init();
 		controllers.QuestionAbcd.init();
 		controllers.QuestionInput.init();
+                controllers.QuestionOrder.init();
 		
 		me.showMainMenuView();
 	},
