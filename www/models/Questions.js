@@ -119,50 +119,50 @@ models.Questions = {
 			{
 				questionType: "B",
 				question: {
-					text: "Quest B3",
-					correctAnswer: "3"
+					text: "Koji je broj 5 puta veći od zbroja svojih znamenaka?",
+					correctAnswer: "45"
 				}
 			},
 			{
 				questionType: "B",
 				question: {
-					text: "Quest B4",
-					correctAnswer: "4"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
-					text: "Quest B5",
-					correctAnswer: "5"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
-					text: "Quest B6",
-					correctAnswer: "6"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
-					text: "Quest B7",
-					correctAnswer: "7"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
-					text: "Quest B8",
+					text: "Ove je godine jedan četvrti razred srednje škole pokazao izuzetan interes za strane jezike. Od 30 učenika u razredu samo dvoje nije odabralo dodatni izborni jezik. Od preostalih učenika 14 ih je odabralo talijanski kao dodatni predmet, a 22 španjolski. Može li se iz toga zaključiti koliko je učenika izabralo čak dva jezika kao izborni predmet?",
 					correctAnswer: "8"
 				}
 			},
 			{
 				questionType: "B",
 				question: {
-					text: "Quest B9",
-					correctAnswer: "9"
+					text: "Gospodin Lovrić kupio je novi alarm za kuću. Šifra ima pet znamenaka, a za slučaj da zaborave šifru, on je svojim ukućanima dao pet tragova: Zbroj petog i trećeg broja je 14, četvrti broj je za jedan veći od drugog, Prvi broj je za jedan manji od drugog pomnoženog s dva, zbroj drugog i trećeg je deset, zbroj svih brojeva je 30.",
+					correctAnswer: "74658"
+				}
+			},
+			{
+				questionType: "B",
+				question: {
+					text: "U svakoj velikoj kutiji nalazi se toliko malih kutija koliko ukupno ima velikih kutija. Koliko ima velikih kutija, ako ukupno imamo 870 kutija?",
+					correctAnswer: "29"
+				}
+			},
+			{
+				questionType: "B",
+				question: {
+					text: "Netko je upitao stočara na sajmu: - Koliko imate ovaca u svom stadu. On je odgovorio: - Danas sam kupio 40 ovaca i sada ih je tri puta više nego što ih je bilo prije toga. Koliko ovaca ima stočar?",
+					correctAnswer: "60"
+				}
+			},
+			{
+				questionType: "B",
+				question: {
+					text: "Jučer je, u 4.e razredu, broj učenika koji su bili na nastavi bio 4 puta veći od broja učenika koji su ostali kod kuće radi gripe. Danas se jedan učenik vratio na nastavu, pa je broj učenika na nastavi bio 5 puta veći od broja odsutnih. Koliko je ukupno učenika u 4.e razredu?",
+					correctAnswer: "30"
+				}
+			},
+			{
+				questionType: "B",
+				question: {
+					text: "Dok je mama kupovala ljekove u ljekarni, njezine tri kćeri zabavljale su se vagajući se zajedno na medicinskoj vagi. Naposljetku su sve zajedno stale na vagu. Koliko kilograma imaju sve tri zajedno ako su rezultati njihova vaganja bili ovakvi: Ana i Dora zajedno imaju 18kg, Tea i Ana imaju zajedno 21kg, Tea i Dora imaju zajedno 25kg.",
+					correctAnswer: "32"
 				}
 			}
 		]
