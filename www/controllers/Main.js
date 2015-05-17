@@ -26,6 +26,7 @@ controllers.Main = {
 		models.Locations.init();
 		models.Questions.init();
 		models.Games.init();
+                models.Score.init();
 
 		if(!models.Games.getAllGames()) {
 			me.generateGames();

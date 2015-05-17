@@ -44,10 +44,17 @@ controllers.QuestionInput = {
 		else {
 
 			if(selectedValue === solution) {
+                                var cscore = models.Score.getCurrentScore();
+                                var points = 100 - 10 * activeGame.numberOfFails;
 				controllers.Common.showMessageBox("Odgovor je točan.\
 					Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
-					". pokušaja.", "Potvrdi", "button confirm-input", false);
-
+					". pokušaja. Osvojili ste " + (100 - 5 * activeGame.numberOfFails) + " bodova.", "Potvrdi", "button confirm-input", false);
+                                
+                                if (points < 25) points = 25;
+                                cscore = cscore + points;
+                                models.Score.setCurrentScore(cscore);
+                                models.Score.syncData();
+                                
 				activeGame.status = "finished";
 				models.Games.activateNextGame(gameIndex + 1);
 				textBox.value = "";

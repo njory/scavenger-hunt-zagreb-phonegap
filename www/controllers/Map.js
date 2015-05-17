@@ -134,7 +134,11 @@ controllers.Map = {
 	},
 	gameFinished: function() {
 		controllers.Common.showMessageBox("Game finished", "Play again", "button play-again", false);
-	},
+                var cname = "test2";
+                controllers.Score.updateScoreBoard(cname);
+                models.Score.setCurrentScore(0);
+                models.Score.syncData();
+        },
 	onPlayAgain: function() {
 		controllers.Main.generateGames();
 		controllers.Map.refreshCircles();
