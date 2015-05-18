@@ -15,7 +15,7 @@ controllers.QuestionOrder = {
                 view.on('touchstart', '.button', me.onAnswerSelect);
 		navigationBar.on('touchstart', '.left-button.back-from-order', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-order', me.onConfirm);
-		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
+		messageBox.on('touchstart', '.button.confirm-order', me.onMessageBoxConfirm);
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
