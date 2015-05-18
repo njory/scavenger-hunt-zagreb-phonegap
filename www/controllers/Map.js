@@ -256,6 +256,7 @@ controllers.Map = {
 		);
 
 		controllers.QuestionAbcd.clearAnswers();
+                controllers.QuestionAbcd.startTimer();
 		views.Map.hide(200);
 		views.MessageBox.hide(200);
 		views.QuestionAbcd.show(200);
@@ -274,6 +275,7 @@ controllers.Map = {
 			"fa fa-check"
 		);
 		
+                controllers.QuestionInput.startTimer();
 		views.Map.hide(200);
 		views.MessageBox.hide(200);
 		views.QuestionInput.show(200);
@@ -305,6 +307,7 @@ controllers.Map = {
 			"fa fa-check"
                 );
         
+                controllers.QuestionOrder.startTimer();
                 views.Map.hide(200);
                 views.MessageBox.hide(200);
                 views.QuestionOrder.show(200);

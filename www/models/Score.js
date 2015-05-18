@@ -2,6 +2,7 @@ models.Score = {
 	items: null,
 	key: "Score",
         crScore: null,
+        crTime: null,
 	init: function() {
 		var me = this;
 		me.loadScore();
@@ -11,6 +12,7 @@ models.Score = {
 		storage = data.Storage;
 		me.items = storage.loadData(me.key);
                 me.crScore = storage.loadData("Current");
+                me.crTime = storage.loadData("Time");
 	},
 	checkConstraints: function(index) {
 		var me = this,
@@ -40,23 +42,20 @@ models.Score = {
 		var me = this;
                 return me.crScore;
 	},
-	getPlayerByIndex: function(index) {
-		var me = this,
-		items = me.items;
-		me.checkConstraints(index);
-		return items[index];
+	setCurrentTime: function(time) {
+		var me = this;
+                me.crTime = time;
 	},
-	setPlayerByIndex: function(index, data) {
-		var me = this,
-		items = me.items;
-		me.checkConstraints(index);
-		items[index] = data;
+	getCurrentTime: function() {
+		var me = this;
+                return me.crTime;
 	},
 	syncData: function() {
 		var me = this,
 		storage = data.Storage;
 		storage.saveData(me.key, me.items);
                 storage.saveData("Current", me.crScore);
+                storage.saveData("Time", me.crTime);
 	}
 }
 

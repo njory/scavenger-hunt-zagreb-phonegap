@@ -23,6 +23,7 @@ controllers.QuestionAbcd = {
 			"fa fa-info"
 		);
 
+                controllers.QuestionAbcd.stopTimer();
 		controllers.Map.refreshCircles();
 		views.Map.show(200);
 		views.QuestionAbcd.hide(200);
@@ -41,6 +42,7 @@ controllers.QuestionAbcd = {
 		else {
 
 			if(selectedAnswer.attr("data-correct") == "Y") {
+                                var me = controllers.QuestionAbcd;
                                 var points = 100 - 25 * activeGame.numberOfFails;
                                 if (points < 25) points = 25;
 				controllers.Common.showMessageBox("Odgovor je točan.\
@@ -51,6 +53,8 @@ controllers.QuestionAbcd = {
                                 var cscore = models.Score.getCurrentScore();
                                 cscore = cscore + points;
                                 models.Score.setCurrentScore(cscore);
+                                me.stopTimer();
+                                models.Score.setCurrentTime(0);
                                 models.Score.syncData();
                                 
 				activeGame.status = "finished";
@@ -88,5 +92,28 @@ controllers.QuestionAbcd = {
 				a = answerDivs.eq(i);
 				a.removeClass("selected");
 			}
+	},
+        time: 0,
+        timer: null,
+	startTimer: function() {
+		this.time = models.Score.getCurrentTime();
+                this.timer = setInterval(function () {
+                    var me = controllers.QuestionAbcd;
+                    me.time++;
+                    var minutes = Math.floor(me.time / 60);
+                    var seconds = me.time % 60;
+                    var leadingZero;
+                    if(seconds < 10) leadingZero = "0";
+                    else leadingZero = "";
+                    views.NavigationBar.find(".title").eq(0).html(minutes + " : " + leadingZero + seconds);
+                }, 1000);
+	},
+	stopTimer: function() {
+                if(this.timer != null){
+                    clearInterval(this.timer);
+                    models.Score.setCurrentTime(this.time);
+                    models.Score.syncData();
+                    this.timer = null; this.time = 0;
+                }
 	}
 };
