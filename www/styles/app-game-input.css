@@ -29,36 +29,37 @@
     font-size: 160%;
 }
 
-.sh-app-game-input .question .hint-button {
+.sh-app-game-input .hint-button {
     
         position: absolute;
-        margin-top: 1%;
-        margin-left: 1%;
+        margin-top: 3%;
+        margin-left: 45%;
         
         visibility: visible;
         display: block;
         
-	height: 10%;
-	width: 12%;
+	height: 50px;
+	width: 49px;
         
-	font-size: 300%;
+	font-size: 350%;
         font-weight: bold;
         
 	float: left;
         color: rgb(153, 230, 255);
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
         text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
 
-.sh-app-game-input .question .hint-button i.fa {
+.sh-app-game-input .hint-button i.fa {
 	position: absolute;
-        top: 5%; 
-        left: 5%;
+        margin-top: -3px;
 }
 
 .sh-app-game-input .input {
 	height: 40%;
 	width: 100%;
-	margin-top: 10%;
+	margin-top: 0%;
 }
 
 .sh-app-game-input .input .inputOne .textInput{
