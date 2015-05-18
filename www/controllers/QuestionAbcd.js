@@ -44,6 +44,7 @@ controllers.QuestionAbcd = {
 			if(selectedAnswer.attr("data-correct") == "Y") {
                                 var me = controllers.QuestionAbcd;
                                 var points = 100 - 25 * activeGame.numberOfFails;
+                                points = Math.floor(points / (1 + me.time/600));
                                 if (points < 25) points = 25;
 				controllers.Common.showMessageBox("Odgovor je točan.\
 					Uspjeli ste iz " + (activeGame.numberOfFails + 1) +

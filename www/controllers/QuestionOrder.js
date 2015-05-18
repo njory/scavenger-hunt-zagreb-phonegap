@@ -49,6 +49,7 @@ controllers.QuestionOrder = {
             if (controller.createdSequence == controllers.Map.activeGame.game.question.correctAnswer) {
                     var me = controllers.QuestionOrder;
                     var points = 100 - 15 * activeGame.numberOfFails;
+                    points = Math.floor(points / (1 + me.time/600));
                     if (points < 25) points = 25;
                     controllers.Common.showMessageBox("Odgovor je točan.\
                             Uspjeli ste iz " + (activeGame.numberOfFails + 1) +

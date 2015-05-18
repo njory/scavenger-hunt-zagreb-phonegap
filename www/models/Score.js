@@ -3,6 +3,7 @@ models.Score = {
 	key: "Score",
         crScore: null,
         crTime: null,
+        crHint: false,
 	init: function() {
 		var me = this;
 		me.loadScore();
@@ -13,6 +14,7 @@ models.Score = {
 		me.items = storage.loadData(me.key);
                 me.crScore = storage.loadData("Current");
                 me.crTime = storage.loadData("Time");
+                me.crHint = storage.loadData("Hint");
 	},
 	checkConstraints: function(index) {
 		var me = this,
@@ -50,12 +52,21 @@ models.Score = {
 		var me = this;
                 return me.crTime;
 	},
+        setHintUsed: function(boolValue) {
+		var me = this;
+                me.crHint = boolValue;
+	},
+        getHintUsed: function() {
+		var me = this;
+                return me.crHint;
+	},
 	syncData: function() {
 		var me = this,
 		storage = data.Storage;
 		storage.saveData(me.key, me.items);
                 storage.saveData("Current", me.crScore);
                 storage.saveData("Time", me.crTime);
+                storage.saveData("Hint", me.crHint);
 	}
 }
 

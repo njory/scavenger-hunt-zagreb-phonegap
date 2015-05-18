@@ -47,7 +47,13 @@ controllers.QuestionInput = {
 			if(selectedValue === solution) {
                                 var me = controllers.QuestionInput;
                                 var points = 100 - 10 * activeGame.numberOfFails;
+                                points = Math.floor(points / (1 + me.time/600));
                                 if (points < 25) points = 25;
+                                if(models.Score.getHintUsed()) {
+                                    points = Math.floor(points/2);
+                                    models.Score.setHintUsed(false);
+                                    models.Score.syncData();
+                                }
 				controllers.Common.showMessageBox("Odgovor je točan.\
 					Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
 					". pokušaja. Osvojili ste " + (points) + " bodova.", 
@@ -80,6 +86,8 @@ controllers.QuestionInput = {
 		controller.onBack();
 	},
 	onAskHint: function() {
+                models.Score.setHintUsed(true);
+                models.Score.syncData();
                 var activeGame = controllers.Map.activeGame;
 		controllers.Common.showMessageBox("Hint: Tocan odgovor je " + activeGame.game.question.correctAnswer + ".", "", "button no-button", true);
 	},
