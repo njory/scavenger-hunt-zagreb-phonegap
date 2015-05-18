@@ -72,7 +72,8 @@
 }
 
 .sh-app-message-box-cover .sh-app-message-box .button.confirm-abcd,
-.sh-app-message-box-cover .sh-app-message-box .button.confirm-input {
+.sh-app-message-box-cover .sh-app-message-box .button.confirm-input,
+.sh-app-message-box-cover .sh-app-message-box .button.confirm-order {
 	background-color: rgb(121, 149, 64);
 }
 

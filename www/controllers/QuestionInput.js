@@ -49,7 +49,7 @@ controllers.QuestionInput = {
 				controllers.Common.showMessageBox("Odgovor je točan.\
 					Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
 					". pokušaja. Osvojili ste " + (points) + " bodova.", 
-                                        "Potvrdi", "button confirm-abcd", false);
+                                        "Potvrdi", "button confirm-input", false);
                                 
                                 var cscore = models.Score.getCurrentScore();
                                 cscore = cscore + points;
@@ -67,13 +67,6 @@ controllers.QuestionInput = {
 			models.Games.setGameByIndex(gameIndex, activeGame);
 			models.Games.syncData();
 		}
-	},
-	onMessageBoxConfirm: function() {
-		var controller = controllers.QuestionInput,
-			messageBox = views.MessageBox;
-
-		messageBox.hide();
-		controller.onBack();
 	},
 	onMessageBoxConfirm: function() {
 		var controller = controllers.QuestionInput,

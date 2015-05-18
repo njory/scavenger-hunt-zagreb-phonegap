@@ -51,7 +51,7 @@ controllers.QuestionOrder = {
                     controllers.Common.showMessageBox("Odgovor je točan.\
                             Uspjeli ste iz " + (activeGame.numberOfFails + 1) +
                             ". pokušaja. Osvojili ste " + (points) + " bodova.", 
-                            "Potvrdi", "button confirm-abcd", false);
+                            "Potvrdi", "button confirm-order", false);
 
                     var cscore = models.Score.getCurrentScore();
                     cscore = cscore + points;
