@@ -45,6 +45,14 @@
 	margin-top: 10%;
 }
 
+.sh-app-message-box-cover .sh-app-message-box .text {
+	height: 20%;
+	width: 80%;
+        font-size: 70%;
+        margin-left: 10%;
+	margin-top: 10%;
+}
+
 .sh-app-message-box-cover .sh-app-message-box .button {
 	position: absolute;
 	bottom: 10%;
@@ -80,4 +88,21 @@
 .sh-app-message-box-cover .sh-app-message-box .button.close-info,
 .sh-app-message-box-cover .sh-app-message-box .button.no-button {
 	display: none;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .input {
+	height: 20%;
+	width: 100%;
+	margin-top: 5%;
+}
+
+.sh-app-message-box-cover .sh-app-message-box .input .inputOne .textInput{
+	width: 60%;
+	font-size:100%;
+	float: left;
+
+	display: table;
+        text-align: center;
+	margin-top: 5%;
+	margin-left: 20%;
 }

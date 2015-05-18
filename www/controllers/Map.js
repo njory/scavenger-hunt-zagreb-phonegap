@@ -133,13 +133,14 @@ controllers.Map = {
 		}
 	},
 	gameFinished: function() {
-		controllers.Common.showMessageBox("Game finished", "Play again", "button play-again", false);
-                var cname = "test2";
-                controllers.Score.updateScoreBoard(cname);
-                models.Score.setCurrentScore(0);
-                models.Score.syncData();
+		controllers.Common.showMessageBox("Game finished" + '<div class="text">Unesite svoje ime!</div><div class="input"><div class="inputOne"><input class="textInput" id="nameField" type="text"/></div></div>'
+                , "Play again", "button play-again", false);
         },
 	onPlayAgain: function() {
+                var cname = document.getElementById("nameField").value;
+                if(cname.length > 0) {controllers.Score.updateScoreBoard(cname);}
+                models.Score.setCurrentScore(0);
+                models.Score.syncData();
 		controllers.Main.generateGames();
 		controllers.Map.refreshCircles();
 		views.MessageBox.hide(200);
