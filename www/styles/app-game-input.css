@@ -32,20 +32,20 @@
 .sh-app-game-input .hint-button {
     
         position: absolute;
-        margin-top: 3%;
-        margin-left: 45%;
+        margin-top: 18%;
+        margin-left: 85%;
         
         visibility: visible;
         display: block;
         
-	height: 50px;
-	width: 49px;
+		height: 50px;
+		width: 49px;
         
-	font-size: 350%;
+		font-size: 350%;
         font-weight: bold;
         
-	float: left;
-        color: rgb(153, 230, 255);
+		float: left;
+        color: rgb(234, 112, 14);
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.8);
         text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
@@ -53,7 +53,7 @@
 
 .sh-app-game-input .hint-button i.fa {
 	position: absolute;
-        margin-top: -3px;
+    margin-top: -3px;
 }
 
 .sh-app-game-input .input {
@@ -68,7 +68,7 @@
 	float: left;
 
 	display: table;
-        text-align: center;
+    text-align: center;
 	margin-top: 20%;
 	margin-left: 19%;
 }

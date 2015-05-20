@@ -13,19 +13,16 @@
 
 .sh-app-main-menu .button {
 	width: 50%;
-	height: 60px;
-	
-        margin-left: 25%;
+	height: 60px;	
+    margin-left: 25%;
 
 	line-height: 65px;
 	text-align: center;
 	font-size: 200%;
 
 	color: #fff;
-
 	border-radius: 10px;
-        
-        background-color: rgb(121, 149, 64);
+    background-color: rgb(121, 149, 64);
 }
 
 .sh-app-main-menu .button.play {
