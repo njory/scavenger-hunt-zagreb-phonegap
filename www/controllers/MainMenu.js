@@ -57,15 +57,17 @@ controllers.MainMenu = {
             );
         },
         onSound: function() {
-		var me = controllers.MainMenu,
-			soundButton = document.getElementById("sound");
-		if(me.zvuk.paused){
-			me.zvuk.play();
-			soundButton.className = "button soundOn";
+			var me = controllers.MainMenu,
+				soundButton = views.MainMenu.find("#sound").eq(0);
+			if (me.zvuk.paused){
+				me.zvuk.play();
+				soundButton.removeClass();
+				soundButton.addClass("button soundOn");
 			}
-		else{
-			me.zvuk.pause();
-			soundButton.className = "button soundOff";
+			else {
+				me.zvuk.pause();
+				soundButton.removeClass();
+				soundButton.addClass("button soundOff");
 			}
 	}
 };

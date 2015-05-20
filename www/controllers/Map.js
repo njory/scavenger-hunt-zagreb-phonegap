@@ -226,8 +226,8 @@ controllers.Map = {
 			case "B":
 				controller.showQuestionInput(gameNumber + 1, activeGame);
 				break;
-                        case "C":
-                                controller.showQuestionOrder(gameNumber + 1, activeGame);
+			case "C":
+				controller.showQuestionOrder(gameNumber + 1, activeGame);
 		}
 	},
 	showQuestionAbcd: function(gameNumber, activeGame) {

@@ -32,7 +32,7 @@ controllers.Common = {
 
 		messageBox.show(200);
 	},
-	switchNavigationBar: function(titleVal, leftCls, rightCls, leftIconCls, rightIconCls, hVisibility) {
+	switchNavigationBar: function(titleVal, leftCls, rightCls, leftIconCls, rightIconCls) {
 		var navigationBar = views.NavigationBar,
 			title = navigationBar.find(".title").eq(0),
 			leftButton = navigationBar.find(".left-button").eq(0),
