@@ -17,7 +17,7 @@ controllers.Map = {
 		view.on('touchstart', '.circle.scanned', me.onScannedCircleTap);
 		messageBox.on('touchstart', '.button.scan', me.onScanButtonTap);
 		messageBox.on('touchstart', '.button.play-again', me.onPlayAgain);
-                navigationBar.on('touchstart', '.left-button.back-from-map', me.onBack);
+        navigationBar.on('touchstart', '.left-button.back-from-map', me.onBack);
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -146,9 +146,9 @@ controllers.Map = {
                 if(cname.length > 0) {controllers.Score.updateScoreBoard(cname);}
                 models.Score.setCurrentScore(0);
                 models.Score.syncData();
-		controllers.Main.generateGames();
-		controllers.Map.refreshCircles();
-		views.MessageBox.hide(200);
+				controllers.Main.generateGames();
+				controllers.Map.refreshCircles();
+				views.MessageBox.hide(200);
 	},
 	generateCircleHtml: function(number, game) {
 		return '<div class="circle ' + game.status + '" data-index="' + number + '">' +
