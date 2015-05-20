@@ -36,9 +36,8 @@ controllers.QuestionInput = {
 		var view = views.QuestionInput;
                 var question = view.find(".question").eq(0);
                 question.hide(200);
-                var me = $('#inputField');
+                $('#inputField').delay(200).focus();
                 // timeout je hack, potreban zbog nekih bugova prisutnih u javascriptu
-                setTimeout(function(){me.focus();}, 50);
 	},
 	onEndInput: function(e) {
                 var view = views.QuestionInput;
