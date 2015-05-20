@@ -52,8 +52,10 @@ controllers.Main = {
 	},
 	onBackButtonPress: function(event) {
 		event.preventDefault();
-		var leftButton = views.NavigationBar.find(".left-button").eq(0);
-		leftButton.trigger('touchstart');
+		if(!views.MessageBox.is(":visible")) {
+			var leftButton = views.NavigationBar.find(".left-button").eq(0);
+			leftButton.trigger('touchstart');
+		}
 	},
 	showMainMenuView: function() {
 		var splashScreen = views.SplashScreen,

@@ -1,11 +1,10 @@
-var zvuk;
-
 controllers.MainMenu = {
+	zvuk: null,
 	init: function() {
 		var me = this;
-		controllers.zvuk = new Audio("sound/music.mp3");
-		controllers.zvuk.loop = true;
-		controllers.zvuk.play();
+		me.zvuk = new Audio("sound/music.mp3");
+		me.zvuk.loop = true;
+		me.zvuk.play();
 		me.bindEvents();
 	},
 	bindEvents: function() {
@@ -58,13 +57,14 @@ controllers.MainMenu = {
             );
         },
         onSound: function() {
-		var soundButton = document.getElementById("sound");
-		if(controllers.zvuk.paused){
-			controllers.zvuk.play();
+		var me = controllers.MainMenu,
+			soundButton = document.getElementById("sound");
+		if(me.zvuk.paused){
+			me.zvuk.play();
 			soundButton.className = "button soundOn";
 			}
 		else{
-			controllers.zvuk.pause();
+			me.zvuk.pause();
 			soundButton.className = "button soundOff";
 			}
 	}
