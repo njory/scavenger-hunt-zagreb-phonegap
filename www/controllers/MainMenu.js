@@ -1,6 +1,11 @@
+var zvuk;
+
 controllers.MainMenu = {
 	init: function() {
 		var me = this;
+		controllers.zvuk = new Audio("sound/music.mp3");
+		controllers.zvuk.loop = true;
+		controllers.zvuk.play();
 		me.bindEvents();
 	},
 	bindEvents: function() {
@@ -10,6 +15,8 @@ controllers.MainMenu = {
 		view.on('touchstart', '.button.play', me.onPlay);
                 view.on('touchstart', '.button.score', me.onScore);
                 view.on('touchstart', '.button.help', me.onHelp);
+                view.on('touchstart', '.button.soundOn', me.onSound);
+		view.on('touchstart', '.button.soundOff', me.onSound);
 	},
 	onPlay: function() {
 		controllers.Map.refreshCircles();
@@ -49,7 +56,18 @@ controllers.MainMenu = {
 			"fa fa-chevron-left",
 			"fa fa-info"
             );
-        }
+        },
+        onSound: function() {
+		var soundButton = document.getElementById("sound");
+		if(controllers.zvuk.paused){
+			controllers.zvuk.play();
+			soundButton.className = "button soundOn";
+			}
+		else{
+			controllers.zvuk.pause();
+			soundButton.className = "button soundOff";
+			}
+	}
 };
 
 

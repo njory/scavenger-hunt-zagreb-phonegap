@@ -33,17 +33,17 @@ controllers.QuestionInput = {
                 views.QuestionInput.find(".question").eq(0).show(200);
 	},
 	onInput: function() {
-		view = views.QuestionInput;
+		var view = views.QuestionInput;
                 var question = view.find(".question").eq(0);
                 question.hide(200);
                 $('#inputField').focus();
 	},
 	onEndInput: function(e) {
-                view = views.QuestionInput;
-                var text = view.find(".question").eq(0);
+                var view = views.QuestionInput;
+                var question = view.find(".question").eq(0);
                 if((e.keyCode || e.which) == 13){
                         $('#inputField').blur();
-                        text.show(200);
+                        question.show(200);
                 }
 	},
 	onConfirm: function() {

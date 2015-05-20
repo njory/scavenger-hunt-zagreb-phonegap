@@ -33,6 +33,12 @@
 }
 
 .sh-app-main-menu .button.score,
-.sh-app-main-menu .button.help{
+.sh-app-main-menu .button.help,
+.sh-app-main-menu .button.soundOn{
     margin-top: 10%;
+}
+
+.sh-app-main-menu .button.soundOff{
+    margin-top: 10%;
+    background-color: rgb(100, 100, 100);
 }
