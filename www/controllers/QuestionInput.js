@@ -11,11 +11,12 @@ controllers.QuestionInput = {
 
 		//view.on('touchstart', '.inputOne', me.onAnswerSelect); ovo valjda netreba
                 view.on('touchstart', '.hint-button', me.onAskHint);
-                view.on('touchstart', '.textInput', me.onInput);
+                view.on('focus', '.textInput', me.onInput);
+                view.on('blur', '.textInput', me.onEndInput);
 		navigationBar.on('touchstart', '.left-button.back-from-input', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-input', me.onConfirm);
 		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
-                $('#inputField').bind('keypress', function(e) { me.onEndInput(e); });
+                $('#inputField').bind('keypress', function(e) { if((e.keyCode || e.which) == 13){$('#inputField').blur();} });
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -36,15 +37,11 @@ controllers.QuestionInput = {
 		var view = views.QuestionInput;
                 var question = view.find(".question").eq(0);
                 question.hide(200);
-                $('#inputField').focus();
 	},
-	onEndInput: function(e) {
+	onEndInput: function() {
                 var view = views.QuestionInput;
                 var question = view.find(".question").eq(0);
-                if((e.keyCode || e.which) == 13){
-                        $('#inputField').blur();
-                        question.show(200);
-                }
+                question.show(200);
 	},
 	onConfirm: function() {
 		var controller = controllers.QuestionInput,
