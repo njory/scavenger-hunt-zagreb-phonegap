@@ -45,13 +45,13 @@
 	text-align: center;
 	font-size: 150%;
 
-	color: #fff;
+	color: #000;
 
 	border-radius: 10px;
         
-        background-color: rgb(121, 149, 64);
+        background-color: rgba(255, 255, 255, 0.8);
 }
 
 .sh-app-game-order .button.selected {
-    background-color: rgb(80, 125, 30);
+        background-color: rgba(234, 112, 14, 0.8);
 }
