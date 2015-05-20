@@ -47,61 +47,7 @@ models.Questions = {
 					correctAnswer: "a4"
 				}
 			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 5",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a1"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 6",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a2"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 7",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a3"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 8",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a4"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 9",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a1"
-				}
-			},
+			
 			{
 				questionType: "B",
 				question: {
@@ -121,13 +67,6 @@ models.Questions = {
 				question: {
 					text: "Koji je broj 5 puta veći od zbroja svojih znamenaka?",
 					correctAnswer: "45"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
-					text: "Ove je godine jedan četvrti razred srednje škole pokazao izuzetan interes za strane jezike. Od 30 učenika u razredu samo dvoje nije odabralo dodatni izborni jezik. Od preostalih učenika 14 ih je odabralo talijanski kao dodatni predmet, a 22 španjolski. Može li se iz toga zaključiti koliko je učenika izabralo čak dva jezika kao izborni predmet?",
-					correctAnswer: "8"
 				}
 			},
 			{
