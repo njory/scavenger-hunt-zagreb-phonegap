@@ -81,6 +81,28 @@ models.Questions = {
 				}
 			},
 			{
+				questionType: "A",
+				question: {
+					text: "Question 8",
+					a1: "Answer 1",
+					a2: "Answer 2",
+					a3: "Answer 3",
+					a4: "Answer 4",
+					correctAnswer: "a4"
+				}
+			},
+			{
+				questionType: "A",
+				question: {
+					text: "Question 9",
+					a1: "Answer 1",
+					a2: "Answer 2",
+					a3: "Answer 3",
+					a4: "Answer 4",
+					correctAnswer: "a1"
+				}
+			},
+			{
 				questionType: "B",
 				question: {
 					text: "Maja i Emil imaju nekoliko jabuka. Ako Emil da Maji jabuku oboje će imati jednak broj jabuka. Ako Maja da Emilu jabuku, on će imati duplo više jabuka od nje. Koliko jabuka ima Emil?",
@@ -132,6 +154,13 @@ models.Questions = {
 			{
 				questionType: "B",
 				question: {
+					text: "Jučer je, u 4.e razredu, broj učenika koji su bili na nastavi bio 4 puta veći od broja učenika koji su ostali kod kuće radi gripe. Danas se jedan učenik vratio na nastavu, pa je broj učenika na nastavi bio 5 puta veći od broja odsutnih. Koliko je ukupno učenika u 4.e razredu?",
+					correctAnswer: "30"
+				}
+			},
+			{
+				questionType: "B",
+				question: {
 					text: "Dok je mama kupovala ljekove u ljekarni, njezine tri kćeri zabavljale su se vagajući se zajedno na medicinskoj vagi. Naposljetku su sve zajedno stale na vagu. Koliko kilograma imaju sve tri zajedno ako su rezultati njihova vaganja bili ovakvi: Ana i Dora zajedno imaju 18kg, Tea i Ana imaju zajedno 21kg, Tea i Dora imaju zajedno 25kg.",
 					correctAnswer: "32"
 				}
@@ -139,12 +168,34 @@ models.Questions = {
                         {
 				questionType: "C",
 				question: {
-					text: "During the latest round of the ScavengerHunt triathlon, Keith was fourth. Adrian is not the oldest, but is older than Duncan, who was not second. The child who was next in age to the youngest, finished second. The child who finished in third place is older than the child who finished first. Billy is younger than the child who finished in third place. Can you determine who finished where and place the children in order of age?",
-					a1: "Keith",
-                    a2: "Adrian",
-                    a3: "Duncan",
-                    a4: "Billy",
-					correctAnswer: "Duncan,Billy,Adrian,Keith"
+					text: "Tijekom zadnje runde ScavengerHunt triatlona, Jure je bio četvrti. Marin nije najstariji, ali je stariji od Petra, koji nije završio drugi. Dječak koji je drugi najmlađi, završio je drugi. Dječak koji je završio treći stariji je od dječaka koji je završio prvi. Ivica je mlađi od dječaka koji je završio treći. Odredite poredak dječaka od najmlađeg do najstarijeg.",
+					a1: "Jure",
+                                        a2: "Marin",
+                                        a3: "Petar",
+                                        a4: "Ivica",
+                                        correctAnswer: "Petar,Ivica,Marin,Jure"
+				}
+			},
+                        {
+				questionType: "C",
+				question: {
+					text: "Na nedavno održanom umjetničkom natjecanju, Ivanino predstavljanje Leonarda nije došlo zadnje. Josipa je izbjegla zadnje mjesto i došla treća. Djevojka koja je nacrtala Moneta bila je vrlo uspješna i osvojila prvo mjesto. Ana je pobijedila djevojku koja je nacrtala Taylorovo djelo dok je djevojka s crtežom Van Gogha pobijedila Veru. Odredite redoslijed umjetničkih djela.",
+					a1: "Leonardo",
+                                        a2: "Monet",
+                                        a3: "Taylor",
+                                        a4: "Van Gogh",
+                                        correctAnswer: "Monet,Leonardo,Van Gogh,Taylor"
+				}
+			},
+                        {
+				questionType: "C",
+				question: {
+					text: "Na nedavnoj utrci Dezzlup Cup, prva četiri konja rasturila su konkurenciju. Munja nije završio zadnji dok konj obučen u plavo nije bio treći. Strijela je završio ispred konja u zelenom. Raketa je došao prvi. Strijela je završio prije Munje. Hitri je bio obučen u crveno dok Strijela nije bio obučen u žuto. Odredite završni redoslijed konja na utrci.",
+					a1: "Munja",
+                                        a2: "Strijela",
+                                        a3: "Raketa",
+                                        a4: "Hitri",
+                                        correctAnswer: "Raketa,Strijela,Munja,Hitri"
 				}
 			}
 		];
