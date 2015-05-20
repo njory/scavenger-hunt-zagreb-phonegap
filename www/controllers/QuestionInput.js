@@ -11,10 +11,11 @@ controllers.QuestionInput = {
 
 		//view.on('touchstart', '.inputOne', me.onAnswerSelect); ovo valjda netreba
                 view.on('touchstart', '.hint-button', me.onAskHint);
+                view.on('touchstart', '.textInput', me.onInput);
 		navigationBar.on('touchstart', '.left-button.back-from-input', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-input', me.onConfirm);
 		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
-                $('#inputField').bind('keypress', function(e) { if((e.keyCode || e.which) == 13){ $('#inputField').blur(); }});
+                $('#inputField').bind('keypress', function(e) { me.onEndInput(e); });
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -24,11 +25,26 @@ controllers.QuestionInput = {
 			"fa fa-chevron-left",
 			"fa fa-info"
 		);
-
+                $('#inputField').blur();
                 controllers.QuestionInput.stopTimer();
 		controllers.Map.refreshCircles();
 		views.Map.show(200);
 		views.QuestionInput.hide(200);
+                views.QuestionInput.find(".question").eq(0).show(200);
+	},
+	onInput: function() {
+		view = views.QuestionInput;
+                var question = view.find(".question").eq(0);
+                question.hide(200);
+                $('#inputField').focus();
+	},
+	onEndInput: function(e) {
+                view = views.QuestionInput;
+                var text = view.find(".question").eq(0);
+                if((e.keyCode || e.which) == 13){
+                        $('#inputField').blur();
+                        text.show(200);
+                }
 	},
 	onConfirm: function() {
 		var controller = controllers.QuestionInput,
@@ -42,7 +58,9 @@ controllers.QuestionInput = {
 		$('#inputField').blur();
 		if(selectedValue.length === 0) {
 			controllers.Common.showMessageBox("Niste unjeli nikakav odgovor", "", "button no-button", true);
-		}
+                        views.QuestionInput.find(".question").eq(0).show(200);
+                        $('#inputField').blur();
+            }
 		else {
                         
 			if(selectedValue === solution) {
