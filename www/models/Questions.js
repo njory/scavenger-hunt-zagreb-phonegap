@@ -81,28 +81,6 @@ models.Questions = {
 				}
 			},
 			{
-				questionType: "A",
-				question: {
-					text: "Question 8",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a4"
-				}
-			},
-			{
-				questionType: "A",
-				question: {
-					text: "Question 9",
-					a1: "Answer 1",
-					a2: "Answer 2",
-					a3: "Answer 3",
-					a4: "Answer 4",
-					correctAnswer: "a1"
-				}
-			},
-			{
 				questionType: "B",
 				question: {
 					text: "Maja i Emil imaju nekoliko jabuka. Ako Emil da Maji jabuku oboje će imati jednak broj jabuka. Ako Maja da Emilu jabuku, on će imati duplo više jabuka od nje. Koliko jabuka ima Emil?",
@@ -154,13 +132,6 @@ models.Questions = {
 			{
 				questionType: "B",
 				question: {
-					text: "Jučer je, u 4.e razredu, broj učenika koji su bili na nastavi bio 4 puta veći od broja učenika koji su ostali kod kuće radi gripe. Danas se jedan učenik vratio na nastavu, pa je broj učenika na nastavi bio 5 puta veći od broja odsutnih. Koliko je ukupno učenika u 4.e razredu?",
-					correctAnswer: "30"
-				}
-			},
-			{
-				questionType: "B",
-				question: {
 					text: "Dok je mama kupovala ljekove u ljekarni, njezine tri kćeri zabavljale su se vagajući se zajedno na medicinskoj vagi. Naposljetku su sve zajedno stale na vagu. Koliko kilograma imaju sve tri zajedno ako su rezultati njihova vaganja bili ovakvi: Ana i Dora zajedno imaju 18kg, Tea i Ana imaju zajedno 21kg, Tea i Dora imaju zajedno 25kg.",
 					correctAnswer: "32"
 				}
@@ -170,10 +141,10 @@ models.Questions = {
 				question: {
 					text: "During the latest round of the ScavengerHunt triathlon, Keith was fourth. Adrian is not the oldest, but is older than Duncan, who was not second. The child who was next in age to the youngest, finished second. The child who finished in third place is older than the child who finished first. Billy is younger than the child who finished in third place. Can you determine who finished where and place the children in order of age?",
 					a1: "Keith",
-                                        a2: "Adrian",
-                                        a3: "Duncan",
-                                        a4: "Billy",
-                                        correctAnswer: "Duncan,Billy,Adrian,Keith"
+                    a2: "Adrian",
+                    a3: "Duncan",
+                    a4: "Billy",
+					correctAnswer: "Duncan,Billy,Adrian,Keith"
 				}
 			}
 		];
