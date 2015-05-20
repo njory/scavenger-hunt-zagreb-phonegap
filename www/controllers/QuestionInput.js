@@ -14,6 +14,7 @@ controllers.QuestionInput = {
 		navigationBar.on('touchstart', '.left-button.back-from-input', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-input', me.onConfirm);
 		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
+                $('#inputField').bind('keypress', function(e) { if((e.keyCode || e.which) == 13){ $('#inputField').blur(); }});
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -38,12 +39,12 @@ controllers.QuestionInput = {
 		
 		var selectedValue = textBox.value,
 			solution = activeGame.game.question.correctAnswer;
-		
+		$('#inputField').blur();
 		if(selectedValue.length === 0) {
 			controllers.Common.showMessageBox("Niste unjeli nikakav odgovor", "", "button no-button", true);
 		}
 		else {
-
+                        
 			if(selectedValue === solution) {
                                 var me = controllers.QuestionInput;
                                 var points = 100 - 10 * activeGame.numberOfFails;
