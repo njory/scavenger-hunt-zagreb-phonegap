@@ -135,6 +135,11 @@ controllers.Map = {
 	gameFinished: function() {
 		controllers.Common.showMessageBox("Game finished" + '<div class="text">Unesite svoje ime!</div><div class="input"><div class="inputOne"><input class="textInput" id="nameField" type="text"/></div></div>'
                 , "Play again", "button play-again", false);
+                $('#nameField').bind('keypress', function(e) {
+                    if((e.keyCode || e.which) == 13){
+                            $('#nameField').blur();
+                    }
+                });
         },
 	onPlayAgain: function() {
                 var cname = document.getElementById("nameField").value;
