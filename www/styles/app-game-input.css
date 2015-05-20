@@ -33,11 +33,9 @@
     
         position: absolute;
         margin-top: 18%;
-        margin-left: 85%;
-        
+        margin-left: 85%;      
         visibility: visible;
         display: block;
-        
 		height: 50px;
 		width: 49px;
         
@@ -62,7 +60,7 @@
 	margin-top: 0%;
 }
 
-.sh-app-game-input .input .textInput{
+.sh-app-game-input .input .inputOne .textInput{
 	width: 60%;
 	font-size:200%;
 	float: left;
