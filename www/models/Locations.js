@@ -4,39 +4,39 @@ models.Locations = {
 		var me = this;
 		me.items = [
 			{
-				address: "Lokacija 1",
+				address: "Trg bana Josipa Jelačića 11",
 				code: "1"
 			},
 			{
-				address: "Lokacija 2",
+				address: "Glazbeni paviljon, Trg Nikole Šubića Zrinskog",
 				code: "2"
 			},
 			{
-				address: "Lokacija 3",
+				address: "Trg kralja Tomislava 12",
 				code: "3"
 			},
 			{
-				address: "Lokacija 4",
+				address: "Park Bundek",
 				code: "4"
 			},
 			{
-				address: "Lokacija 5",
+				address: "Hrvatsko narodno kazalište u Zagrebu, Trg maršala Tita 15",
 				code: "5"
 			},
 			{
-				address: "Lokacija 6",
+				address: "Savska cesta 206",
 				code: "6"
 			},
 			{
-				address: "Lokacija 7",
+				address: "Trg Svetog Marka 1",
 				code: "7"
 			},
 			{
-				address: "Lokacija 8",
+				address: "Maksimirska cesta 125",
 				code: "8"
 			},
 			{
-				address: "Lokacija 9",
+				address: "Nacionalna i sveučilišna knjižnica, Hrvatske Bratske Zajednice 4",
 				code: "9"
 			}
 		]
