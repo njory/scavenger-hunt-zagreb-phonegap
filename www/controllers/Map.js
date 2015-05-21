@@ -133,8 +133,8 @@ controllers.Map = {
 		}
 	},
 	gameFinished: function() {
-		controllers.Common.showMessageBox("Game finished" + '<div class="text">Unesite svoje ime!</div><div class="input"><div class="inputOne"><input class="textInput" id="nameField" type="text"/></div></div>'
-                , "Play again", "button play-again", false);
+		controllers.Common.showMessageBox("Igra je završena" + '<div class="text">Unesite svoje ime!</div><div class="input"><div class="inputOne"><input class="textInput" id="nameField" type="text"/></div></div>'
+                , "Igraj ponovo", "button play-again", false);
                 $('#nameField').bind('keypress', function(e) {
                     if((e.keyCode || e.which) == 13){
                             $('#nameField').blur();
@@ -165,7 +165,7 @@ controllers.Map = {
 		controller.showGameScanMessageBox(game);
 	},
 	showGameScanMessageBox: function(game) {
-		controllers.Common.showMessageBox(game.location.address, "Scan", "button scan", true);
+		controllers.Common.showMessageBox(game.location.address, "Skeniraj", "button scan", true);
 	},
 	onScannedCircleTap: function() {
 		var controller = controllers.Map;
@@ -207,11 +207,11 @@ controllers.Map = {
 			controller.selectGame();
 		}
 		else {
-			controllers.Common.showMessageBox("Skenirali ste krivi kod.", "Scan", "button no-button", true);
+			controllers.Common.showMessageBox("Skenirali ste krivi kod.", "Skeniraj", "button no-button", true);
 		}
 	},
 	onScanError: function(error) {
-		controllers.Common.showMessageBox("Pogreška prilikom skeniranja.", "Scan", "button no-button", true);
+		controllers.Common.showMessageBox("Pogreška prilikom skeniranja.", "Skeniraj", "button no-button", true);
 	},
 	selectGame: function() {
 		var controller = controllers.Map,

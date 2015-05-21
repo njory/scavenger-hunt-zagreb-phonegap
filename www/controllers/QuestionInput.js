@@ -105,7 +105,7 @@ controllers.QuestionInput = {
                 models.Score.setHintUsed(true);
                 models.Score.syncData();
                 var activeGame = controllers.Map.activeGame;
-		controllers.Common.showMessageBox("Hint: Tocan odgovor je " + activeGame.game.question.correctAnswer + ".", "", "button no-button", true);
+		controllers.Common.showMessageBox("Hint: Točan odgovor je " + activeGame.game.question.correctAnswer + ".", "", "button no-button", true);
 	},
         time: 0,
         timer: null,
