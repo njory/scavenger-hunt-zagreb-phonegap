@@ -274,7 +274,7 @@ controllers.Map = {
 		question.html(activeGame.game.question.text);
                 
 		controllers.Common.switchNavigationBar(
-			"GAME " + gameNumber,
+			"IGRA " + gameNumber,
 			"left-button back-from-input",
 			"right-button confirm-input",
 			"fa fa-chevron-left",
