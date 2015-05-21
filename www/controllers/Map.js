@@ -18,6 +18,8 @@ controllers.Map = {
 		messageBox.on('touchstart', '.button.scan', me.onScanButtonTap);
 		messageBox.on('touchstart', '.button.play-again', me.onPlayAgain);
         navigationBar.on('touchstart', '.left-button.back-from-map', me.onBack);
+
+        messageBox.on('keypress', '#nameField', me.onNameFieldKeyPress);
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -135,14 +137,14 @@ controllers.Map = {
 	gameFinished: function() {
 		controllers.Common.showMessageBox("Igra je završena" + '<div class="text">Unesite svoje ime!</div><div class="input"><div class="inputOne"><input class="textInput" id="nameField" type="text"/></div></div>'
                 , "Igraj ponovo", "button play-again", false);
-                $('#nameField').bind('keypress', function(e) {
-                    if((e.keyCode || e.which) == 13){
-                            $('#nameField').blur();
-                    }
-                });
-        },
+    },
+    onNameFieldKeyPress: function(e) {
+        if((e.keyCode || e.which) == 13) {
+            $('#nameField').blur();
+        }
+    },
 	onPlayAgain: function() {
-                var cname = document.getElementById("nameField").value;
+                var cname = $("#nameField").eq(0).val();
                 if(cname.length > 0) {controllers.Score.updateScoreBoard(cname);}
                 models.Score.setCurrentScore(0);
                 models.Score.syncData();

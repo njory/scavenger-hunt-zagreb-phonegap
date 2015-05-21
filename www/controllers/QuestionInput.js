@@ -10,13 +10,13 @@ controllers.QuestionInput = {
 			messageBox = views.MessageBox;
 
 		//view.on('touchstart', '.inputOne', me.onAnswerSelect); ovo valjda netreba
-                view.on('touchstart', '.hint-button', me.onAskHint);
-                view.on('focus', '.textInput', me.onInput);
-                view.on('blur', '.textInput', me.onEndInput);
+        view.on('touchstart', '.hint-button', me.onAskHint);
+        view.on('focus', '.textInput', me.onInput);
+        view.on('blur', '.textInput', me.onEndInput);
 		navigationBar.on('touchstart', '.left-button.back-from-input', me.onBack);
 		navigationBar.on('touchstart', '.right-button.confirm-input', me.onConfirm);
 		messageBox.on('touchstart', '.button.confirm-input', me.onMessageBoxConfirm);
-                $('#inputField').bind('keypress', function(e) { if((e.keyCode || e.which) == 13){$('#inputField').blur();} });
+        $('#inputField').bind('keypress', function(e) { if((e.keyCode || e.which) == 13){$('#inputField').blur();} });
 	},
 	onBack: function() {
 		controllers.Common.switchNavigationBar(
@@ -46,11 +46,11 @@ controllers.QuestionInput = {
 	onConfirm: function() {
 		var controller = controllers.QuestionInput,
 			view = views.QuestionInput,
-			textBox = document.getElementById("inputField"),
+			textBox = view.find("#inputField").eq(0),
 			gameIndex = controllers.Map.activeGameIndex,
 			activeGame = controllers.Map.activeGame
 		
-		var selectedValue = textBox.value,
+		var selectedValue = textBox.val(),
 			solution = activeGame.game.question.correctAnswer;
 		$('#inputField').blur();
 		if(selectedValue.length === 0) {
@@ -84,7 +84,7 @@ controllers.QuestionInput = {
                                 
 				activeGame.status = "finished";
 				models.Games.activateNextGame(gameIndex + 1);
-				textBox.value = "";
+				textBox.val("");
 			} else {
 				controllers.Common.showMessageBox("Odgovor nije točan. Pokušajte ponovo...", "", "button no-button", true);
 				activeGame.numberOfFails++;
